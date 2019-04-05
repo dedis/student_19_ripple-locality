@@ -1,0 +1,11 @@
+{
+  "name": "my_ripple_experiment",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "ripple-lib": "*"
+  },
+  "devDependencies": {
+    "eslint": "*"
+  }
+}
