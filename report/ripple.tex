@@ -18,7 +18,7 @@ A direct XRP payment enables two wallets to pay each other even if they are not 
 
 All other currencies are exchanged over path-based transactions. Those transactions use a path of credit links that connects the sender to the receiver in order to make the transfer. Ripple has no way to enforce path based payments. It only records the amounts owed by one wallet to one other. A payment from A to B is only possible if there is a path that connects A to B. Moreover, A can only make a successful IOU payment to B if the payment value falls within the credit balance allocated on this path. For a given transaction, the total amount can be split into several paths. This enables to make payments even if there is not a single path that has enough credit capacity. In our example of Figure \ref{fig:network}, let's assume that Dave wants to pay Filip 5 USD. A possible path would be Dave $\leftarrow$ Gatehub $\rightarrow$ Emma $\leftarrow$ Bitstamp $\rightarrow$ Filip. When the transactions succeed the credit links are updated. In our situation, the links Dave $\leftarrow$ Gatehub and Emma $\leftarrow$ Bitstamp are decreased by 5 USD whereas Gatehub $\rightarrow$ Emma and Bitstamp $\rightarrow$ Filip are increased by 5 USD.
 
-The combination of direct XRP payments and path-based transactions is natively supported in the Ripple network and they are atomically executed as a whole thanks to the Ripple Consensus (see 1.5)
+The combination of direct XRP payments and path-based transactions is natively supported in the Ripple network and they are atomically executed as a whole thanks to the Ripple Consensus (see 2.5)
 
 \subsection{Main actors}
 In addition to standard wallets, there are wallets with special characteristics.
@@ -34,7 +34,7 @@ To compose a path from a sender to a receiver, there are two possible operations
 \item[Exchanging] Exchanging is the process of converting one currency to another. A wallet that is willing to exchange one currency for another creates an exchange offer for this pair, this wallet will then be identified as a market maker. The typical exchange offers are from issued currencies to issued currencies (eg. USD/EUR). However, it is possible to offer exchanges from/to XRP. There are some path-based transactions that use exchanges offered by market markers involving XRP, then the transaction becomes sort of both path-based and 'direct' in the sense that is used both XRP and issued currencies.
 \end{description}
 Back to Figure \ref{fig:network}, we now have Alice that wants to pay 100 USD to Charlie. Alice only has credit links only in EUR, however, suppose Bob publishes an offer EUR/USD with a rate 1 USD = 0.9 EUR. Bob plays the role of a Market Maker and enables Alice to pay Charlie by spending 90 EUR. The links are updated as follow: Alice $\leftarrow$ Gatehub is decreased by 90 EUR, Gatehub $\rightarrow$ Bob is increased by 90 EUR, Bob $\leftarrow$ Bitstamp is increased by 100 USD and finally Bitstamp $\rightarrow$ Charlie is increased by 100 USD.
-Notice that the links of Gatehub and Bitstamp are shifted respectively by 90 EUR and 100 USD due to Rippling.
+Notice that the links of Gatehub and Bitstamp are shifted respectively by 90 EUR and 100 USD due to Rippling. Bob is a Market Marker in this situation.
 
 \subsection{Nodes and Consensus}
 The XRP network presented in the previous subsection is contained in a ledger. Every few seconds the XRP ledger has a new version which increments the index of the ledger by one. To operate properly and make the ledger progress with the arrival of new transactions, the XRP ledger relies on a set of servers. When a wallet wants to make a payment, it sends the transaction information to one server and it needs to operate according to rules so that the transaction may be applied and executed in the next version of the ledger.
@@ -46,10 +46,12 @@ The XRP ledger servers are also called nodes. There are two main types for nodes
 \item[Validating server] validator for short - Participates in Consensus, a process designed to accept or deny a transaction based on some rules (and does everything a stock server does)
 \end{description}
 Servers propose transactions to apply to the current version of the ledger, this could lead to different versions with different content for the same ledger index. Of the many candidates, only one can become validated and thus there is only one valid ledger for each index. When a set of transactions can be applied to the ledger, and that validator has agreed on this set a new version of the ledger is created and it is marked as $validated$. In a perfect scenario, each new transaction would be known to each node allowing each to consider the same set of transactions to apply to the current version of the ledger. However, transactions take time to propagate and servers are not aware of all transactions. To answer this problem, the XRP Ledger uses a process called Consensus to ensure that all nodes have the same last version of the validated ledger.
+\vspace{\baselineskip}
 
-Consensus comes in three steps:
-\begin{description}
-\item[Deliberation] Nodes iteratively propose a set of transactions to apply to the prior ledger. Nodes receive proposals from other trusted nodes and adjust their set of transactions. When a node believes enough proposals agree, it applies the corresponding transactions to the prior ledger according to the ledger protocol rules. It then issues a validation for the generated ledger.
-\item[Validation] Nodes decide if they fully validate a ledger, given the validations received from trusted nodes. Once the needed amount of validations for the same ledger is reached, that ledger is fully validated and become irreversible.
-\item[Preferred Branch] Nodes determine the most popular working branch of ledger history. There could be conflicts due to asynchrony, network difficulties and nodes could validate different ledgers for the same index. The nodes use the ledger ancestry of trusted validations to get back to the network’s preferred branch.
-\end{description}
+In section 2 we present some background about Ripple. Our work is described in section 3. The limitations to our work are explained in the next section. Finally, we give a conclusion and further steps in section 5 and 6.
+
+%Consensus comes in three steps:
+%%\item[Deliberation] Nodes iteratively propose a set of transactions to apply to the prior ledger. Nodes receive proposals from other trusted nodes and adjust their set of transactions. When a node believes enough proposals agree, it applies the corresponding transactions to the prior ledger according to the ledger protocol rules. It then issues a validation for the generated ledger.
+%\item[Validation] Nodes decide if they fully validate a ledger, given the validations received from trusted nodes. Once the needed amount of validations for the same ledger is reached, that ledger is fully validated and become irreversible.
+%\item[Preferred Branch] Nodes determine the most popular working branch of ledger history. There could be conflicts due to asynchrony, network difficulties and nodes could validate different ledgers for the same index. The nodes use the ledger ancestry of trusted validations to get back to the network’s preferred branch.
+%\end{description}

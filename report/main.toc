@@ -6,18 +6,18 @@
 \contentsline {subsection}{\numberline {2.4}Main operations}{3}% 
 \contentsline {subsection}{\numberline {2.5}Nodes and Consensus}{4}% 
 \contentsline {section}{\numberline {3}Estimating wallet geographical position}{5}% 
-\contentsline {subsection}{\numberline {3.1}Using nodes}{5}% 
+\contentsline {subsection}{\numberline {3.1}Finding the IP of wallets}{5}% 
 \contentsline {subsubsection}{\numberline {3.1.1}Ripple crawler}{5}% 
 \contentsline {subsubsection}{\numberline {3.1.2}Connect to existing nodes}{5}% 
-\contentsline {subsubsection}{\numberline {3.1.3}Running our own node}{6}% 
+\contentsline {subsubsection}{\numberline {3.1.3}Running our own node}{5}% 
 \contentsline {subsection}{\numberline {3.2}Running a gateway}{6}% 
-\contentsline {subsection}{\numberline {3.3}Nodes positions}{7}% 
-\contentsline {subsection}{\numberline {3.4}Using transactions data}{8}% 
+\contentsline {subsection}{\numberline {3.3}Nodes positions}{6}% 
+\contentsline {subsection}{\numberline {3.4}Using transactions data}{7}% 
 \contentsline {subsubsection}{\numberline {3.4.1}Looking at credit links}{8}% 
 \contentsline {subsubsection}{\numberline {3.4.2}Evolution of credit links}{10}% 
 \contentsline {subsubsection}{\numberline {3.4.3}Looking at currencies}{14}% 
-\contentsline {section}{\numberline {4}Limitations}{15}% 
-\contentsline {section}{\numberline {5}Conclusion}{15}% 
+\contentsline {section}{\numberline {4}Limitations}{16}% 
+\contentsline {section}{\numberline {5}Conclusion}{16}% 
 \contentsline {section}{\numberline {6}Further work}{16}% 
 \contentsline {section}{\numberline {7}Reproduce results}{17}% 
-\contentsline {section}{References}{18}% 
+\contentsline {section}{References}{19}% 

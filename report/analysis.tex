@@ -1,8 +1,8 @@
 \section{Estimating wallet geographical position}
 The goal of this project is to investigate whether there is some locality in Ripple transactions. After having a brief overview of how the Ripple network operates we can now start to explore different techniques to estimate wallets geographical positions.
 
-\subsection{Using nodes}
-Nodes are the backbone of the Ripple Network. Our first focus was to dig into the possibilities that nodes could give us.
+\subsection{Finding the IP of wallets}
+Nodes are the backbone of the Ripple Network. Our first focus was to dig into the possibilities that nodes could give us. This section describes unsuccessful techniques, readers in a rush can jump to section 3.2
 
 \subsubsection{Ripple crawler}
 We found a crawler\cite{crawler} that crawl ripple nodes, and could give us geographical positions. At first, it seemed a good idea that could give us estimates of the positions of the wallets. However, as mentioned in the Ripple background section, the wallets and the nodes are not linked directly. This crawler finally turns out to be useless since it could only give us information about nodes and not on wallets.
@@ -16,12 +16,12 @@ While trying to estimate wallet position, we thought about running nodes in vari
 However, if we could get client connection to our nodes to send their transaction then we could know thanks to IP address position of the actual sender of the transactions. But how to get users sending their transactions to us? The only way would be to advertise our node since users can choose freely the node they want to use to send their transaction. We believe that we would get only a few users connection to our servers if any. In addition, we looked at the source code of some popular ripple clients and from what we could learn it seems those clients connect to the public nodes maintained by ripple. This promising idea finally turned out to be left out, as most of the users go through the same node to propagate their transactions then we would probably retrieve any information from running our own nodes.
 
 \subsection{Running a gateway}
-Gateways are highly connected wallets in the Ripple network, they are the door between the Ripple network and the real world. A new wallet in the ripple network can create a credit link with a gateway then send (in the real world) some money to this gateway and then the user will have this credit available on the link with the gateway. The idea is that when a user goes on the gateway platform, creates a wallet and send money to a gateway, then the gateways are able to link wallet identifiers to a real-world person with their location thanks to either the IP address or either the postal address (usually gateways ask it due to regulations). Hence our first idea was then to look at whether it was easy to run a gateway and have clients connecting to us. It turns out the Ripple documentation\cite{runGateway} gives the steps to run a gateway but due to the complexity, it is outside of the scope of this project and left as further work.
+Gateways are highly connected wallets in the Ripple network, they are the door between the Ripple network and the real world. A new wallet in the ripple network can create a credit link with a gateway then send (in the real world) some money to this gateway and then the user will have this credit available on the link with the gateway. The idea is that when a user goes on the gateway platform, creates a wallet and send money to a gateway, then the gateways are able to link wallet identifiers to a real-world person with their location thanks to either the IP address or either the postal address (usually gateways ask it due to regulations). Hence our first idea was then to look at whether it was easy to run a gateway and have clients connecting to us. It turns out the Ripple documentation\cite{runGateway} gives the steps to run a gateway but due to the complexity and costs constrains we abandoned the idea, it is left as further work.
 
 \subsection{Nodes positions}
 As explained above, the Ripple Data API\cite{data-api} enables us to know all nodes and their IP. We can then process the IP addresses obtained and map each node to a country.
 
-\begin{wrapfigure}[18]{l}{0.4\textwidth}
+\begin{wrapfigure}[9]{l}{0.4\textwidth}
     \includegraphics[width = 0.35\textwidth,keepaspectratio]{repartiton_of_nodes.png}
     \caption{Repartition of Ripple nodes}
     \label{fig:repartition}
@@ -34,7 +34,7 @@ We see that the country that has the most node is the United States then comes G
 
 We want to see if the number of nodes in a country is correlated to how this country's currency is used in the Ripple ledger.
 
-\begin{figure}[b!]
+\begin{figure}[h!]
     \centering
     \includegraphics[width = 0.95\linewidth]{top_10_currencies_in_volume_in_XRP.png}
     \caption{Top 10 currencies in XRP volume}
@@ -62,9 +62,8 @@ As we explained before, each credit link is associated with a currency. We looke
 We now present another look at credit links where we looked at the currencies that linked the sender and gateway on the first hop of a transaction (and respectively the gateway and the receiver on the last hop). A gateway is a first hop (respectively a last hop) if it is the first wallet after the sender on the path from sender to receiver (respectively the last wallet before the receiver).
 
 \begin{figure}[h!]
-    \centering
-    \includegraphics[width = \linewidth]{first_last_hop_currencies_per_gateways.png}
-    \caption{Currency of transaction for first and last hop per gateway}
+  \makebox[\textwidth][c]{\includegraphics[width=1.1\textwidth]{first_last_hop_currencies_per_gateways.png}}
+  \caption{Currency of transaction for first and last hop per gateway}
     \label{fig:first_lap_hop_per_gateway}
 \end{figure}
 
@@ -88,6 +87,7 @@ Following up with the results we obtained on credit links, we wanted to investig
   \caption{Volume routed trough wallets as first hop for USD in 2017}
   \label{fig:first_hop_USD_volume}
 \end{figure}
+
 Figure \ref{fig:first_hop_USD_nb_txns} shows the number of transactions, with sender using USD, routed trough each wallet and Figure \ref{fig:first_hop_USD_volume}  (on the next page) shows the same transactions but in terms of volume. On the x-axis you can see numbers that represent the month of the year. There is one tick by wallet and by month. We see that the number of transaction increase over time, we can see this increase in the volume plot to but it seems let smooth. It is also interesting to notice the difference between the wallets that appears in Figure \ref{fig:first_hop_USD_nb_txns} and Figure \ref{fig:first_hop_USD_volume}. Some wallets are insignificant in terms of number of transactions but appears in the volume graph. You can also see that for wallets that are gateways we showed their names and their respective fiscal and servers geographical positions (as in Figure \ref{fig:first_lap_hop_per_gateway}). We saw in this last figure that gateways seemed to specialized but remark here that none of the gateways for USD are fiscally situated in the USD. 
 \vspace{\baselineskip}
 
@@ -108,7 +108,7 @@ The results are similar to what we could get from the first hops. However this t
 \vspace{\baselineskip}
 
 In this subsection, we wanted to dig into the evolution of credit links. From what we see is seems that the most popular wallets, that turns out to be gateways, appears usually in each month over 2017. We can conclude that credit links seems quite regular for the wallets with high activity in the Ripple Network. However we also found wallets, that are not gateways, which appears to have high activity. We didn't have time to investigate further on those wallets and this is left out a further work.
-
+\newpage
 \subsubsection{Looking at currencies}
 Next step in our analysis of transaction locality. We looked at the sender and receiver currency pair and if there were any correlation. We expect to find here a lot of cross-currency payment in the Ripple Network. We looked at all transactions in our data and counted the number of transactions that correspond to each possible sender and receiver currency pairs.
 \begin{figure}[h!]

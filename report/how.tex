@@ -1,4 +1,51 @@
 \section{Reproduce results}
-How to run the project
+Make sure you have anaconda \path{https://www.anaconda.com} installed to run the Jupyter Notebooks.
 
+You may want to install pip \path{https://pip.pypa.io/en/stable/installing/} to install the needed libraries easily.
+Install the libraries from a terminal with:
+\begin{itemize}
+\item \texttt{\$ pip install tqdm}
+\item \texttt{\$ pip install python-ripple-lib}
+\item \texttt{\$ pip install coinmarketcap}
+\item \texttt{\$ pip install currencyconverter}
+\end{itemize}
 
+Install node.js \path{https://nodejs.org/en/download/} to run the javascript in the connect\_to\_nodes folder
+
+Data is not uploaded to Github because it is too heavy.
+
+We have three original files situated in ripple\_analysis/data/transactions/original
+\begin{itemize}
+\item ripple-transactions-jan-2013-dec-2016.txt
+\item more-txs-from-missing-parsed.txt
+\item final\_txs\_2017.txt
+\end{itemize}
+
+We renamed \texttt{more-txs-from-missing-parsed.txt} to \texttt{more-txs-from-missing-parsed.json} and \texttt{final\_txs\_2017.txt} to \texttt{final\_txs\_2017.json}
+
+\texttt{ripple-transactions-jan-2013-dec-2016.txt} is processed in \texttt{ripple-transactions-jan-2013-dec-2016.ipynb} situated in ripple\_analysis/notebooks
+
+The new files
+\begin{itemize}
+\item more-txs-from-missing-parsed.json
+\item final\_txs\_2017.json
+\item ripple-transactions-jan-2013-dec-2016.csv
+\end{itemize}
+are situated in ripple\_analysis/data/transactions
+
+This folder contains the code used when we tried to connect to Ripple node
+\begin{itemize}
+\item get\_node\_urls is a jupyter notebook used to get the nodes url
+\item get-server-info.js is a javascript file where we try to connect to nodes
+\end{itemize}
+
+From a terminal then go to the connect\_to\_nodes folder and you can run
+
+\texttt{node get-server-info.js}
+
+% ripple\_analysis
+From a terminal to the ripple\_analysis folder and then run
+
+\texttt{jupyter notebook}
+
+a new tab will open in your browser and you will be able to run the notebooks.

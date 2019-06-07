@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.28)  7 JUN 2019 14:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.28)  7 JUN 2019 22:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -267,58 +267,58 @@ Package pdftex.def Info: network.png  used on input line 7.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[1] [2 <./network.png>] [3] [4]) (./analysis.tex [5] [6]
-<repartiton_of_nodes.png, id=43, 194.70389pt x 336.69318pt>
+[1] [2 <./network.png>] [3]) (./analysis.tex [4] [5]
+<repartiton_of_nodes.png, id=40, 194.70389pt x 336.69318pt>
 File: repartiton_of_nodes.png Graphic file (type png)
 <use repartiton_of_nodes.png>
 Package pdftex.def Info: repartiton_of_nodes.png  used on input line 25.
 (pdftex.def)             Requested size: 126.0022pt x 217.88725pt.
-<top_10_currencies_in_volume_in_XRP.png, id=44, 767.19565pt x 493.7033pt>
+ [6 <./repartiton_of_nodes.png>]
+<top_10_currencies_in_volume_in_XRP.png, id=45, 767.19565pt x 493.7033pt>
 File: top_10_currencies_in_volume_in_XRP.png Graphic file (type png)
 <use top_10_currencies_in_volume_in_XRP.png>
 Package pdftex.def Info: top_10_currencies_in_volume_in_XRP.png  used on input 
 line 39.
 (pdftex.def)             Requested size: 341.9989pt x 220.0777pt.
- [7 <./repartiton_of_nodes.png> <./top_10_currencies_in_volume_in_XRP.png>] [8]
-<first_last_hop_currencies_per_gateways.png, id=53, 1084.05pt x 1445.4pt>
+ [7 <./top_10_currencies_in_volume_in_XRP.png>]
+<first_last_hop_currencies_per_gateways.png, id=50, 1084.05pt x 1445.4pt>
 File: first_last_hop_currencies_per_gateways.png Graphic file (type png)
 <use first_last_hop_currencies_per_gateways.png>
 Package pdftex.def Info: first_last_hop_currencies_per_gateways.png  used on in
-put line 66.
-(pdftex.def)             Requested size: 360.0pt x 480.00502pt.
+put line 65.
+(pdftex.def)             Requested size: 396.0022pt x 527.99669pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: Citation `repo' on page 9 undefined on input line 78.
-
-[9] [10 <./first_last_hop_currencies_per_gateways.png>]
+[8] [9 <./first_last_hop_currencies_per_gateways.png>]
 <number_of_transactions_processed_by_gateways_as_first_hop_for_USD_in_2017_per_
-month.png, id=61, 1168.79012pt x 607.068pt>
+month.png, id=58, 1168.79012pt x 607.068pt>
 File: number_of_transactions_processed_by_gateways_as_first_hop_for_USD_in_2017
 _per_month.png Graphic file (type png)
 <use number_of_transactions_processed_by_gateways_as_first_hop_for_USD_in_2017_
 per_month.png>
 Package pdftex.def Info: number_of_transactions_processed_by_gateways_as_first_
-hop_for_USD_in_2017_per_month.png  used on input line 81.
+hop_for_USD_in_2017_per_month.png  used on input line 80.
 (pdftex.def)             Requested size: 495.0pt x 257.09734pt.
-<volume_processed_by_gateways_as_first_hop_for_USD_in_2017_per_month.png, id=62
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<volume_processed_by_gateways_as_first_hop_for_USD_in_2017_per_month.png, id=59
 , 1159.15411pt x 606.21776pt>
 File: volume_processed_by_gateways_as_first_hop_for_USD_in_2017_per_month.png G
 raphic file (type png)
 <use volume_processed_by_gateways_as_first_hop_for_USD_in_2017_per_month.png>
 Package pdftex.def Info: volume_processed_by_gateways_as_first_hop_for_USD_in_2
-017_per_month.png  used on input line 87.
+017_per_month.png  used on input line 86.
 (pdftex.def)             Requested size: 495.0pt x 258.87402pt.
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[11 <./number_of_transactions_processed_by_gateways_as_first_hop_for_USD_in_201
-7_per_month.png>]
+[10]
 <number_of_transactions_processed_by_gateways_as_last_hop_for_USD_in_2017_per_g
-ateway.png, id=68, 1169.35693pt x 575.8927pt>
+ateway.png, id=63, 1169.35693pt x 575.8927pt>
 File: number_of_transactions_processed_by_gateways_as_last_hop_for_USD_in_2017_
 per_gateway.png Graphic file (type png)
 <use number_of_transactions_processed_by_gateways_as_last_hop_for_USD_in_2017_p
@@ -331,7 +331,7 @@ op_for_USD_in_2017_per_gateway.png  used on input line 95.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <volume_processed_by_gateways_as_last_hop_for_USD_in_2017_per_gateway.png, id=6
-9, 1160.28777pt x 577.87659pt>
+4, 1160.28777pt x 577.87659pt>
 File: volume_processed_by_gateways_as_last_hop_for_USD_in_2017_per_gateway.png 
 Graphic file (type png)
 <use volume_processed_by_gateways_as_last_hop_for_USD_in_2017_per_gateway.png>
@@ -341,8 +341,9 @@ Package pdftex.def Info: volume_processed_by_gateways_as_last_hop_for_USD_in_20
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[12 <./volume_processed_by_gateways_as_first_hop_for_USD_in_2017_per_month.png>
-]
+[11 <./number_of_transactions_processed_by_gateways_as_first_hop_for_USD_in_201
+7_per_month.png>] [12 <./volume_processed_by_gateways_as_first_hop_for_USD_in_2
+017_per_month.png>]
 
 LaTeX Warning: Text page 13 contains only floats.
 
@@ -362,12 +363,47 @@ File: sender_to_receiver_heatmap_volume.png Graphic file (type png)
 Package pdftex.def Info: sender_to_receiver_heatmap_volume.png  used on input l
 ine 125.
 (pdftex.def)             Requested size: 360.0pt x 360.00375pt.
+) [15 <./sender_to_receiver_heatmap_volume.png>] (./limitations.tex) (./conclus
+ion.tex) (./next.tex)
+[16] (./how.tex
+Overfull \hbox (23.54883pt too wide) in paragraph at lines 4--6
+[]\OT1/cmr/m/n/10.95 You may want to in-stall pip $\OT1/cmtt/m/n/10.95 https : 
+/ / pip . pypa . io / en / stable / installing/$
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 7.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 7.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Overfull \hbox (0.91954pt too wide) in paragraph at lines 13--14
+[]\OT1/cmr/m/n/10.95 Install node.js $\OT1/cmtt/m/n/10.95 https : / / nodejs . 
+org / en / download/$ \OT1/cmr/m/n/10.95 to run the javascript
+ []
 
-(./limitations.tex) (./conclusion.tex) [15] (./next.tex [16 <./sender_to_receiv
-er_heatmap_volume.png>]) (./how.tex) [17]
+
+Overfull \hbox (37.40956pt too wide) in paragraph at lines 17--18
+[]\OT1/cmr/m/n/10.95 We have three orig-i-nal files sit-u-ated in rip-ple[]anal
+ysis/data/transactions/original 
+ []
+
+
+Overfull \hbox (106.12852pt too wide) in paragraph at lines 24--25
+[]\OT1/cmr/m/n/10.95 We re-named \OT1/cmtt/m/n/10.95 more-txs-from-missing-pars
+ed.txt \OT1/cmr/m/n/10.95 to \OT1/cmtt/m/n/10.95 more-txs-from-missing-parsed.j
+son
+ []
+
+
+Overfull \hbox (211.58192pt too wide) in paragraph at lines 26--27
+[]\OT1/cmtt/m/n/10.95 ripple-transactions-jan-2013-dec-2016.txt \OT1/cmr/m/n/10
+.95 is pro-cessed in \OT1/cmtt/m/n/10.95 ripple-transactions-jan-2013-dec-2016.
+ipynb
+ []
+
+[17]) [18]
 Underfull \hbox (badness 10000) in paragraph at lines 54--56
 \OT1/cmtt/m/n/10.95 https : / / developers . ripple . com / become-[]an-[]xrp-[
 ]ledger-[]gateway .
@@ -380,45 +416,44 @@ blic /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--64
+Underfull \hbox (badness 10000) in paragraph at lines 62--65
+\OT1/cmtt/m/n/10.95 https : / / wipple . devnull . network / research / gateway
+s . html$ \OT1/cmr/m/n/10.95 Dev
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--70
+\OT1/cmtt/m/n/10.95 https : / / github . com / dedis / student _ 19 _ ripple-[]
+locality$ \OT1/cmr/m/n/10.95 DEDIS
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--74
 \OT1/cmtt/m/n/10.95 https : / / petsymposium . org / 2016 / files / papers / Li
 stening _ to _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--64
+Underfull \hbox (badness 10000) in paragraph at lines 72--74
 \OT1/cmtt/m/n/10.95 Whispers _ of _ Ripple _ _Linking _ Wallets _ and _ Deanony
 mizing _
  []
 
+[19
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--69
-\OT1/cmtt/m/n/10.95 https : / / wipple . devnull . network / research / gateway
-s . html$ \OT1/cmr/m/n/10.95 Dev
- []
-
-[18
-
-] (./main.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- )
+] (./main.aux) )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 14 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 2666 strings out of 492616
- 37453 string characters out of 6129481
- 102594 words of memory out of 5000000
- 6506 multiletter control sequences out of 15000+600000
+ 2685 strings out of 492616
+ 37782 string characters out of 6129481
+ 102596 words of memory out of 5000000
+ 6522 multiletter control sequences out of 15000+600000
  10273 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,15n,27p,1449b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,15n,27p,1449b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/c
@@ -428,10 +463,10 @@ mr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
 17.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 0.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10
 .pfb>
-Output written on main.pdf (20 pages, 2942123 bytes).
+Output written on main.pdf (21 pages, 2944200 bytes).
 PDF statistics:
- 127 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
+ 130 PDF objects out of 1000 (max. 8388607)
+ 76 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
