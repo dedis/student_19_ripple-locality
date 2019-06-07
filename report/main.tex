@@ -1,0 +1,71 @@
+\documentclass[11pt, a4paper]{article} %draft twoside, openright
+
+\usepackage{graphicx,color}
+\usepackage{amssymb, amsmath, array}
+\usepackage{wrapfig}
+\usepackage{url}
+
+\begin{document}
+
+\input{cover}
+
+\newpage
+\thispagestyle{empty}
+\tableofcontents{\protect\thispagestyle{empty}
+\newpage
+
+% Start page count
+\setcounter{page}{1}
+
+\input{intro}
+
+\input{ripple}
+
+\input{analysis}
+
+\input{limitations}
+
+\input{conclusion}
+
+\input{next}
+
+\input{how}
+
+\clearpage
+	
+\addcontentsline{toc}{section}{References}
+\begin{thebibliography}{4}
+
+	\bibitem{rippled}
+	rippled
+	\\\path{https://github.com/ripple/rippled}
+	2012, 2013, 2014 Ripple Labs Inc.
+
+	\bibitem{crawler}
+	XRPL Network Crawler
+	\\\path{https://github.com/ripple/rippled-network-crawler}
+	Ripple Inc. 2018
+
+	\bibitem{data-api}
+	Ripple Data API v2
+	\\\path{https://developers.ripple.com/data-api.html}
+	
+	\bibitem{runGateway}
+	Become an XRP Ledger Gateway
+	\\\path{https://developers.ripple.com/become-an-xrp-ledger-gateway.html}
+
+	\bibitem{MindYourCredit}
+	Pedro Moreno-Sanchez, Navin Modi, Raghuvir Songhela, Aniket Kate, Sonia Fahmy : Mind Your Credit
+	\\\path{https://www.cs.purdue.edu/homes/pmorenos/public/ripple-study-www.pdf}
+
+	\bibitem{ListeningtoWhispersofRipple}
+	Pedro Moreno-Sanchez, Muhammad Bilal Zafar, and Aniket Kate : Listening to Whispers of Ripple
+	\\\path{https://petsymposium.org/2016/files/papers/Listening_to_Whispers_of_Ripple__Linking_Wallets_and_Deanonymizing_Transactions_in_the_Ripple_Network.pdf}
+	
+	\bibitem{wipple}
+	Know your gateway
+	\\\path{https://wipple.devnull.network/research/gateways.html}
+	Dev Null Productions LLC 2018-2019
+\end{thebibliography}
+
+\end{document}
