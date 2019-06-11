@@ -60,3 +60,5 @@ From a terminal go to the ripple_analysis folder and then run
 `$ jupyter notebook`
 
 a new tab will open in your browser and you will be able to run the notebooks.
+
+Run the **gateways.ipynb**  before **transactions.ipynb** and **credit links.ipynb**.
